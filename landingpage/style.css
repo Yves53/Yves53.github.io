@@ -1,0 +1,57 @@
+body{
+    background: url(milos-simic-351441.jpg) center;
+    background-size: cover;
+}
+
+html{
+    height: 100%;
+}
+
+#content{
+    text-align: center;
+    width: 400px;
+    margin: 25% auto;
+}
+
+.navbar-light .navbar-nav .nav-link{
+    color: #ffffff;
+}
+
+#navbar{
+    background: #2c3e50;
+}
+
+.navbar-light .navbar-brand {
+    color: white;
+}
+
+.title{
+    color: white;
+    font-family: "Colonna MT", sans-serif;
+    font-size: 50px;
+    font-weight: 200;
+    text-shadow: 1px 5px 10px red;
+}
+
+.text{
+    font-family: "Blackadder ITC", sans-serif;
+
+}
+
+.navbar-light .navbar-toggler{
+    background-color: white;
+    border-color:white;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+}
+
+/**{*/
+    /*outline: 1px solid red;*/
+/*}*/

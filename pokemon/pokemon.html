@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pictures of Pokemons</title>
+    <script src="lib/jquery-3.2.1_main.js"></script>
+    <script>
+        $(document).ready(function () {
+            for(var i = 1; i <=150; i++){
+               var img = "<img src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/"+i+".png'>";
+                $("#pictures").append(img);
+            }
+        });
+    </script>
+</head>
+<body>
+<p><strong style="font-size: 22px">Assignment: Pokemon</strong></p>
+<div id="wapper">
+    <div id="pictures">
+    </div>
+</div>
+</body>
+</html>

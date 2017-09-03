@@ -1,0 +1,25 @@
+#wrapper {
+width: 700px;
+    margin:0 auto;
+}
+
+img {
+    height: 150px;
+    width: 150px;
+}
+
+p {
+    text-align: center;
+}
+
+button {
+    height: 30px;
+    width: 120px;
+    border-radius: 8px;
+    background: green;
+    margin-left:300px;
+}
+
+.ninjas {
+    margin: 5px;
+}

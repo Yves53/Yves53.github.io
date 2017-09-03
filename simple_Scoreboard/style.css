@@ -1,0 +1,7 @@
+#wrapper {
+    width: 300px;
+    height: auto;
+    border: 20px solid blue;
+    margin: 200px auto;
+    text-align: center;
+}

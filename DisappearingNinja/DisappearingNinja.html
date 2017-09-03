@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Disappearing Ninja</title>
+    <script type="text/javascript" src="lib/jquery-3.2.1_main.js"></script>
+    <link rel="stylesheet" type="text/css" href="DisappearingNinja.css">
+</head>
+<body>
+
+<div id="wrapper">
+    <p>jQuery ninjas assignment</p>
+    <div id="firstrow">
+        <img class="ninjas" src="img/ninja1.jpg" alt = "ninjas pictures">
+        <img class="ninjas" src="img/ninja2.jpg" alt = "ninjas pictures">
+        <img class="ninjas" src="img/ninja3.jpg" alt = "ninjas pictures">
+        <img class="ninjas" src="img/ninja4.jpg" alt = "ninjas pictures">
+    </div>
+
+    <div id="secondtrow">
+        <img class="ninjas" src="img/ninja5.jpg" alt = "ninjas pictures">
+        <img class="ninjas" src="img/ninja6.jpg" alt = "ninjas pictures">
+        <img class="ninjas" src="img/ninja7.jpg" alt = "ninjas pictures">
+        <img class="ninjas" src="img/ninja8.jpg" alt = "ninjas pictures">
+    </div>
+    <button id = "button" type = "submit">Restore</button>
+</div>
+
+<script>
+    $(".ninjas").on("click", function(){
+        $(this).hide();
+    });
+    $("#button").on("click", function(){
+        $(".ninjas").show();
+    })
+</script>
+
+</body>
+</html>

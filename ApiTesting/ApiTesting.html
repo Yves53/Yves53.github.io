@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>News from the API</title>
+    <script src="lib/jquery-3.2.1_main.js"></script>
+
+</head>
+<body>
+<div class="wrapper">
+        <h1>NEWS</h1>
+    <div id="articles">
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        var api = "bf8ad22318e64774886d7383b77925a5";
+        var url = "https://newsapi.org/v1/articles?source=bbc-news&sortBy=top&apiKey=";
+        $.get(url + api, function (data) {
+            for (var i = 0; i < data.articles.length; i++) {
+                var str = `<div class="news"><a href= ` + data.articles[i].url + ` ><img src=` + data.articles[i].urlToImage + ` /></a><h3>` + data.articles[i].title + `</h3><p>` + data.articles[i].description + `</p></div>`;
+                $('#articles').append(str);
+            }
+        }, "json");
+    });
+    </script>
+</body>
+</html>

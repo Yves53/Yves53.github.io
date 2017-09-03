@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Basic assignment</title>
+    <link rel="stylesheet" type="text/css" href="jQuery_test.css">
+    <script type="text/javascript" src="lib/jquery-3.2.1_main.js"></script>
+
+</head>
+<body>
+<div id=wrapper>
+    <p id="jba">jQuery Basic assignment</p>
+    <div id="uppermenu">
+        <img src="images/arrow_backward.png" alt="backward arrow" style="height:5%; width:5%; object-fit: contain"/>
+        <img src="images/arrow_forward.png" alt="forward arrow" style="height:5%; width:5%; object-fit: contain"/>
+        <img src="images/reload.png" alt="refresh icon" style="height:5%; width:5%; object-fit: contain"/>
+        <input id="firstSearch" type="text" placeholder="Search Bar">
+        <input id="secondSearch" type="text" placeholder="search"/>
+
+    </div>
+
+    <div class="functions">
+        <p class="functionName">Click</p>
+        <button class="buttons click" type="submit" name="submit">Click</button>
+        <span class="texts">Click the button to display a message on the nav bar</span>
+        <p class="lines"></p>
+    </div>
+
+    <div class="functions">
+        <p class="functionName">Hide</p>
+        <button class="buttons hide" type="submit" name="submit">Hide</button>
+        <span class="texts">This button hides the search bar div</span>
+        <p class="lines"></p>
+    </div>
+
+    <div class="functions">
+        <p class="functionName">Show</p>
+        <button class="buttons show" type="submit" name="submit">Show</button>
+        <span class="texts">This button shows the search bar div</span>
+        <p class="lines"></p>
+    </div>
+
+    <div class="functions">
+        <p class="functionName">Toggle</p>
+        <button class="buttons toggle" type="submit" name="submit">Toggle</button>
+        <span class="texts">This button toggle the search bar div (Hide, and show)</span>
+        <p class="lines"></p>
+    </div>
+
+    <div class="functions">
+        <p class="functionName">Slide Down</p>
+        <button class="buttons slided" type="submit" name="submit">Slide Down</button>
+        <span class="texts">This button slides down the search bar div</span>
+        <p class="lines"></p>
+    </div>
+
+    <div class="functions">
+        <p class="functionName">Slide Up</p>
+        <button class="buttons slideu" type="submit" name="submit">Slide Up</button>
+        <span class="texts">This button slides up the search bar div</span>
+        <p class="lines"></p>
+    </div>
+
+    <div class="functions">
+        <p class="functionName">Slide Toggle</p>
+        <button class="buttons slidetoggle" type="submit" name="submit">Slide Toggle</button>
+        <span class="texts">toggle the search bar div</span>
+        <p class="lines"></p>
+    </div>
+
+    <div class="functions">
+        <p class="functionName">Fade In and Out</p>
+        <button class="buttons fade" type="submit" name="submit">Fade</button>
+        <span class="texts">Makes the search bar div fade in on out</span>
+        <p class="lines"></p>
+    </div>
+
+    <div class="functions">
+        <p class="functionName titleclass">Add class</p>
+        <button class="buttons class" type="submit" name="submit">AddClass</button>
+        <span class="texts">It changes the class of this "Add class" to red</span>
+        <p class="lines"></p>
+    </div>
+
+    <div class="functions">
+        <p class="functionName">Before</p>
+        <button class="buttons before" type="submit" name="submit">Before</button>
+        <span class="texts bf"><- Text is added to the left</span>
+        <p class="lines"></p>
+    </div>
+
+    <div class="functions">
+        <p class="functionName">After</p>
+        <button class="buttons after" type="submit" name="submit">After</button>
+        <span class="texts af">It add text here -></span>
+        <p class="lines"></p>
+    </div>
+
+    <div class="functions">
+        <p class="functionName appendt">Append</p>
+        <button class="buttons append" type="submit" name="submit">Append</button>
+        <span class="texts">It add texts next to the title "Append"</span>
+        <p class="lines"></p>
+    </div>
+
+    <div class="functions">
+        <p class="functionName htmlt">HTML</p>
+        <button class="buttons html" type="submit" name="submit">Html</button>
+        <span class="texts">It changes the title with a new title</span>
+        <p class="lines"></p>
+    </div>
+
+    <div class="functions">
+        <p class="functionName attrt">Attributes</p>
+        <button class="buttons attr" type="submit" name="submit">Attr</button>
+        <span class="texts">Coudln't figure this out yet, but will be coming back to it later</span>
+        <p class="lines"></p>
+    </div>
+
+    <div class="functions">
+        <p class="functionName valt">Value</p>
+        <button class="buttons val" type="submit" name="submit">Val</button>
+        <span class="texts">This will display a value on the small search bar</span>
+        <p class="lines"></p>
+    </div>
+
+    <div class="functions">
+        <p class="functionName textt">Text</p>
+        <button class="buttons text" type="submit" name="submit">Text</button>
+        <span class="texts">Change the title </span>
+
+    </div>
+
+</div>
+
+<style type="text/css">
+
+    .red {
+        color: red;
+    }
+</style>
+
+<script>
+
+
+    $('.click').click(function () {
+        $("#firstSearch").val("You clicked the first button");
+    });
+
+    $('.hide').click(function () {
+        $("#uppermenu").hide()
+    });
+    $('.show').click(function () {
+        $("#uppermenu").show()
+    });
+    $('.toggle').click(function () {
+        $("#uppermenu").toggle()
+    });
+    $('.slideu').click(function () {
+        $("#uppermenu").slideUp()
+    });
+    $('.slided').click(function () {
+        $("#uppermenu").slideDown()
+    });
+    $('.slidetoggle').click(function () {
+        $("#uppermenu").slideToggle()
+    });
+    $('.fade').click(function () {
+        $("#uppermenu").fadeToggle(2000)
+    });
+    $('.class').click(function () {
+        $(".titleclass").addClass("red")
+    });
+    $('.before').click(function () {
+        $(".bf").before("<span> It Works</span>")
+
+    });
+    $('.after').click(function () {
+        $(".af").after("<span>nice </span>")
+
+    });
+    $('.append').click(function () {
+        $("div .appendt").append("; the append button works!");
+
+    });
+
+    $('.html').click(function(){
+        $(".htmlt").html("<p>The p tag is changed</p>")
+    });
+
+    $('.attr').click(function(){
+        var at = $("red").attr("div");
+        $("#firstSearch").text(at)
+    });
+
+    $('.val').click(function(){
+        $('#secondSearch').val("Title changed")
+    });
+    $('.text').click(function(){
+        $(".textt").text("The text is replaced")
+    });
+
+</script>
+
+</body>
+</html>

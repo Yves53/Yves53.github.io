@@ -1,0 +1,38 @@
+body{
+    padding-top: 70px;
+}
+img{
+    margin-bottom: 20px;
+}
+.navbar-light .navbar-nav .nav-link{
+    color: #ffffff;
+}
+
+#navbar{
+    background: #2c3e50;
+}
+
+.navbar-light .navbar-brand {
+color: white;
+}
+
+#title{
+    color: #2c3e50;
+}
+
+.jumbotron{
+    background-color: #ecf0f1;
+    text-align: center;
+}
+
+.desc{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 18px;
+    color: rgba(0, 100, 255, 0.5);
+}
+
+.navbar-light .navbar-toggler{
+    background-color: white;
+    border-color:white;
+}

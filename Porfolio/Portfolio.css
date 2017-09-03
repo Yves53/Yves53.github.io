@@ -1,0 +1,157 @@
+#body{/*parameters for the <body>*/
+    width: 990px;
+    margin: auto;
+    padding: 15px;
+}
+
+#wrapper{/*this is the <div> that wraps everything inside the page*/
+    background: radial-gradient(orchid,black);
+}
+#header{/*<div> for everything in the header(id are name and master)*/
+    background-color: whitesmoke;
+    height: 70px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#name{/*<h1> profile name "Jayne doe" */
+    display: inline-block;
+    font-family: "Comic Sans MS",sans-serif;
+    margin: 0;
+    padding-top: 10px;
+}
+#master{/*<h2> for the message "master of shadows and the internet*/
+    display: inline-block;
+    float: right;
+    font-family:Calibri, sans-serif;
+}
+#picture {/*parameters for the profile picture*/
+    display: inline-block;
+    padding: 5px;
+    margin:20px 10px 10px 20px;
+    vertical-align: top;
+    background-color: silver;
+}
+#about {/*<div> for the "About" section*/
+    display: inline-block;
+    width: 467px;
+    height: 303px;
+    margin: 20px 20px 5px 10px;
+    background: linear-gradient(lightgray,white);
+    vertical-align: top;
+    font-family: helvetica, arial, sans-serif;
+    font-size: 16px;
+}
+#abt{/*<h2> tag for the title "About..."*/
+    color: white;
+    background: linear-gradient(lightgrey, grey, lightgrey);
+    margin: 0;
+    padding: 5px;
+}
+.pabout{/*paragraphs in the "about section*/
+    padding-left: 5px;
+    padding-right: 5px;
+    color: purple;
+}
+
+#la_mode{/*this <div> wraps the contain inside "La Mode"*/
+    height: auto;
+    width: 300px;
+    background: linear-gradient(lightgray,white);
+    display: inline-block;
+    margin:10px 10px 20px 20px;
+    vertical-align: top;
+    align-items: center;
+}
+
+#family{/*<div> for the contain inside "Family contacts"*/
+    height: auto;
+    width: 300px;
+    margin:10px 10px 20px 10px;
+    background: linear-gradient(lightgray,white);
+    display: inline-block;
+}
+
+#eleven{/* div containing everything in "fiveEleven" */
+    height: auto;
+    width: 300px;
+    margin:10px 20px 20px 10px;
+    background: linear-gradient(lightgray,white);
+    display: inline-block;
+}
+
+.hmain{/*<h2> for the titles "La Mode", "Family contacts" and "fiveEleven"*/
+    padding: 10px;
+    color: white;
+    background: linear-gradient(lightgrey, grey, lightgrey);
+    margin: 0;
+    font-family: helvetica, arial, sans-serif;
+}
+
+.pmain{/*<p> for the paragraphs inside the main content */
+    padding-left: 5px ;
+    padding-right: 5px;
+    height: 150px;
+    margin: 0;
+    color: purple;
+}
+
+.tech{/*<h3> for the title "Technologies"*/
+    background: linear-gradient(lightgrey, grey, lightgrey);
+    color: white;
+    padding: 10px;
+    font-family: helvetica, arial, sans-serif;
+}
+
+.buttonsDiv{/*parameter for the 3 <div> containing the 3 green buttons*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.buttons{/* parameters for the 3 green buttons*/
+    border-radius:8px;
+    background-color: darkgreen;
+    border-color: black;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: white;
+    box-shadow: 3px 3px black;
+}
+
+img{ /*this resize every images in the html except for the ones with specific parameters inside the html code*/
+    height: 40px;
+    width: 40px;
+    padding: 5px;
+}
+
+#bottom { /*parameters for the <div> containing everything at the bottom of the page */
+    margin: 0;
+    padding: 0;
+    font-family: helvetica, arial, sans-serif;
+    font-size: 16px;
+    background-color: whitesmoke;
+}
+
+#email{ /*parameters for the <p> containing the email address and phone number*/
+    text-align:center;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    margin: 0;
+}
+
+div a{ /* this raises the links (at the bottom of the page) so that they are at the same level with the icons*/
+    vertical-align: 10px;
+    font-size: 17px;
+}
+
+#links{ /* parameters for the div containing the links at the bottom of the page */
+    margin: 0;
+    padding-bottom: 5px;
+    text-align:center;
+    font-style: italic;
+}
+
+.move{
+    margin-left: 20px; /* Moves html, php, jss, and python icons 20px to the right */
+}

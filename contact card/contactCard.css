@@ -1,0 +1,50 @@
+/**{*/
+/*outline: 1px;*/
+/*border: solid 1px red;*/
+/*}*/
+
+#wrapper {
+    width: 700px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+#description {
+    width: 300px;
+    height: 225px;
+}
+
+#info {
+    width: 310px;
+    height: auto;
+    display: inline-block;
+}
+
+#cards {
+    width: 350px;
+    height: auto;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+}
+
+.carddiv {
+
+    height: 60px;
+    overflow-y: scroll;
+    width: 280px;
+    background-color: aqua;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 1px solid red;
+
+
+}
+
+.descript {
+    display: none;
+    margin-top: 0;
+}

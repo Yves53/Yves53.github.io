@@ -1,0 +1,58 @@
+#wrapper {
+    width: 600px;
+    height: auto;
+    background: deepskyblue;
+    margin:0 auto;
+    border-radius : 8px;
+    padding: 10px;
+}
+#jba {
+    text-align: center;
+}
+
+#uppermenu {
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+}
+#firstSearch {
+    width: 300px;
+}
+
+#secondSearch {
+margin-left: 10px;
+    width: 75px
+}
+
+.functions {
+    margin-top: 10px;
+    height:60px;
+
+}
+
+.functionName {
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: -10px;
+}
+
+.texts {
+    margin-top: -10px;
+}
+
+.lines{
+    width : 500px;
+    height : 3px;
+    background: #000;
+    margin: 0 auto;
+}
+
+.buttons {
+    margin-left: 50px;
+    margin-right: 20px;
+    vertical-align: 30px;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+}

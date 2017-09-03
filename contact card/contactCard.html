@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Card</title>
+    <link rel="stylesheet" type="text/css" href="contactCard.css">
+    <script type="text/javascript" src="lib/jquery-3.2.1_main.js"></script>
+</head>
+<body>
+<div id="wrapper">
+    <div id="info">
+        <form>
+            <label>First Name: <input type="text" id="firstname" style="width: 225px"></label>
+            <br/>
+            <br/>
+            <label>Last Name: <input type="text" id="lastname" style="width: 226px"></label>
+            <p>Description:</p>
+            <textarea id="description" placeholder="Enter description"></textarea>
+        </form>
+        <button id="button">Submit</button>
+    </div>
+    <div id="cards">
+    </div>
+</div>
+<script type="text/javascript">
+    $("button").on("click", function () {
+
+        var desc = $("#description").val();
+        if(desc.length === 0){
+            desc = "No description here!"
+        }
+        var first = $("#firstname").val();
+        var last = $("#lastname").val();
+        if(first.length > 0 || last.length > 0) {
+            $("body #cards").prepend(
+                "<div class='carddiv'>" +
+                "<p class='users' style='margin-top: -1px'>" + first + " " + last + "<br/>" + "<a href='#' >Click here for more detail</a></p>" +
+                "<p class='descript'>" + desc + "</div>" +
+                "</div>");
+            $("#firstname").val("");
+            $("#lastname").val("");
+            $("#description").val("");
+            return false;
+        }
+    });
+    $(document).on("click", ".carddiv", function () {
+        $(this).children().toggle();
+    });
+</script>
+</body>
+</html>
