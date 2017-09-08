@@ -18,9 +18,9 @@ class Blackjack(object):
         self.bet_money = bet_money
         self.deposit = deposit
         self.val = val
-        self.array = array  # array ***********************************************************
+        self.array = array
         self.cards_value = cards_value
-        self.d_cards = d_cards  # this is an array ***********************************************************
+        self.d_cards = d_cards
         self.d_cards_value = d_cards_value
         self.answer = answer
         self.remove_ten_p = remove_ten_p
@@ -118,10 +118,11 @@ class Blackjack(object):
 # ***************************************** end Black_jack class *************************************************
 
 bj = Blackjack()
-
+total_won = 0
+total_lost = 0
 print 'How much do you want to deposit?'
 bj.set_deposit()
-
+total_deposit = bj.deposit  # *****************************************************************
 if bj.deposit <= 0:  # This statement check to make sure the player entered a valid amount
     while True:
         print 'INVALID!Please enter an amount more than $0'
@@ -162,7 +163,7 @@ while True:
         # end value of Ace
 
         if value == 11:
-            bj.remove_ten_p += 10
+            bj.remove_ten_p = 10
 
         bj.cards_total_value(value)
         # end Player's first two card
@@ -177,6 +178,8 @@ while True:
         d_card = bj.hit_card()
         bj.dealer_cards(d_card)
         d_value = bj.card_value(bj.val)
+        if d_value == 11:
+            bj.remove_ten_d = 10
         bj.d_cards_total_value(d_value)
         print "The dealer's card is:", bj.print_dealer_cards()
         print "its value is: ", bj.d_cards_total_value()
@@ -202,7 +205,7 @@ while True:
                         h_value = 1
                 if h_value == 11:  # When ace is counted as 11, "remove_ten_d" is assigned the value of 10 so that
                     # it can be subtracted if the total value is over 21
-                    bj.remove_ten_p += 10
+                    bj.remove_ten_p = 10
                 # end value of Ace
                 bj.cards_total_value(h_value)
                 print "Your cards are:", bj.print_player_cards(), "\nTheir value is: ", bj.cards_total_value()
@@ -237,6 +240,7 @@ while True:
     # check if the player won, lost or it's a push; then update the balance accordingly #####
     if bj.cards_total_value() == 21 or bj.d_cards_total_value() > 21 > bj.cards_total_value():  # It's a WIN
         print 'You won!'
+        total_won += bj.bet_money
         bj.deposit += bj.bet_money
         print "Your new balance is: $", bj.deposit
 
@@ -247,6 +251,7 @@ while True:
     else:  # It's a losing deal
         print 'You Lost!'
         bj.deposit -= bj.bet_money
+        total_lost += bj.bet_money
         print "Your new balance is: $", bj.deposit
     # ******* end check for deals #####
 
@@ -277,6 +282,7 @@ while True:
         if deposit_answer == 'Y':  # This statement execute when the player choose to add money
             print 'How much do you want to deposit?'
             bj.set_deposit()
+            total_deposit += bj.deposit
             if bj.deposit <= 0:
                 while True:
                     print 'Please enter a valid amount, more than $0'
@@ -284,9 +290,21 @@ while True:
                     if bj.deposit > 0:
                         break
 
-    if pa_answer == 'N' or bj.deposit == 0:  # Exit the loop (game) when the player answers No (N)
+    if pa_answer == 'N' or bj.deposit == 0:  # Exit the loop (game) when the player answers No (N) or enter 0
         break
 
 # ************************************ End play again! #####################################################
+print "********SUMMARY********"
+print "You deposited a total of $", total_deposit
+print "You won .................$", total_won
+print "You lost ................$", total_lost
+if (total_deposit + total_won - total_lost) > total_deposit:
+    print "This was a WINNING GAME!"
+    print "Overall, You won ....$", (total_won - total_lost)
+elif total_won == total_lost:
+    print "You didn't win or loose anything"
+else:
+    print "This was a LOOSING GAME!"
+    print "Overall, you lost .......$", (total_lost - total_won)
 print 'Thanks for playing!'
 print 'GAME OVER!'
