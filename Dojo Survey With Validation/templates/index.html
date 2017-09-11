@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'style.css') }}">
+<head>
+    <meta charset="UTF-8">
+    <title>form page</title>
+</head>
+<body>
+<div class="container">
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <p>{{ message }}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    <form action="/user" method="post">
+        <p><label for="name">Your Name: <input type="text" name="name"></label></p>
+        <p><label for="location">Dojo Location: <input type="text" name="location"></label></p>
+        <p><label for="language">Fav Language: <input type="text" name="language"></label></p>
+        <p>Comment(optional)</p>
+        <textarea name="comment"></textarea>
+        <input type="submit">
+    </form>
+</div>
+</body>
+</html>
