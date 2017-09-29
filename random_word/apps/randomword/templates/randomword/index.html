@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Random Strings</title>
+</head>
+<body>
+<h3>Random String (attempt# {{ count }})</h3>
+<input type="text" value={{ string }}>
+<form action="" method="post">
+     {% csrf_token %}
+    <input type="submit" value="Generate">
+</form>
+
+<form action="reset/" method="post">
+     {% csrf_token %}
+    <input type="submit" value="reset">
+</form>
+
+</body>
+</html>

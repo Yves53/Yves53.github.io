@@ -15,7 +15,7 @@ def result():
     session['location'] = request.form['location']
     session['language'] = request.form['language']
     session['comment'] = request.form['comment']
-
+    print request.form['name']
     if len(request.form['name']) < 1:
         flash("Name cannot be empty!")
         return redirect('/')

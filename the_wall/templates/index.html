@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<div class="jumbotron text-center">
+    <h1>SANDJOK CORPORATION</h1>
+    <p class="lead">This is Home. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque fugiat
+        harum iste nobis odio perferendis quisquam, sunt. A beatae consequatur
+        deleniti dolore eius esse inventore, magni mollitia omnis recusandae ut!
+    </p>
+    {% if session.logged_in == null%}
+    <a href="/register" class="btn btn-primary btn-lg">Register</a>
+    <a href="/login" class="btn btn-success btn-lg">Login</a>
+    {% endif %}
+</div>
+
+{% endblock %}
+

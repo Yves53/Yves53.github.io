@@ -51,7 +51,11 @@ group by date_format(leads.registered_datetime, '%M %d')
 order by '%M'
 
 
-select concat_ws(' ',clients.first_name, clients.last_name) as client_name, sites.domain_name as website, count(leads.leads_id) as number_of_leads, date_format(leads.registered_datetime, '%M %d %Y') as date_generated
+
+
+select concat_ws(' ',clients.first_name, clients.last_name) as client_name, 
+sites.domain_name as website, count(leads.leads_id) as number_of_leads, 
+date_format(leads.registered_datetime, '%M %d %Y') as date_generated
 from clients
 join sites
 on clients.client_id = sites.client_id
@@ -60,6 +64,8 @@ on sites.site_id = leads.site_id
 where leads.registered_datetime between '2011-01-01' and '2011-12-31'
 group by sites.domain_name
 order by clients.client_id
+
+
 
 select concat_ws(' ',clients.first_name, clients.last_name) as client_name, sites.domain_name as website, count(leads.leads_id) as number_of_leads, date_format(leads.registered_datetime, '%M %d %Y') as date_generated
 from clients

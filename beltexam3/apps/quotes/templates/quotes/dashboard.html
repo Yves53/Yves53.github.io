@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>App for Quotes</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'quotes/style.css' %}">
+</head>
+<body>
+<div id="quotes_wrapper">
+    <a class="quotes_links" href="/logout">Logout</a>
+    <h1>Welcome, {{ request.session.alias }}</h1>
+    <p>Quotable Quotes</p>
+
+    <div id="quotes" style="overflow:auto">
+        <table>
+            {% if quotes %}
+
+                {% for i in quotes %}
+                    <tr>
+                        <td>
+                            <form action="/add_to_list/{{ i.id }}" method="post">
+                                {% csrf_token %}
+                                {{ i.quoted_by }}: {{ i.quote }}
+                                <p>
+                                    <small>Posted by: <a href="/user_quotes/{{ i.usr.id }}">{{ i.usr.alias }}</a></small>
+                                </p>
+                                <input type="submit" value="Add to my list">
+                            </form>
+                        </td>
+                    </tr>
+                {% endfor %}
+
+            {% endif %}
+        </table>
+
+    </div>
+<div id="combined">
+    <div id="wrapper2" style="overflow:auto">
+        <h3><u>Your favorites</u></h3>
+        <div id="favorites">
+
+            <table>
+                {% if favorites %}
+
+                    {% for j in favorites %}
+                        <tr>
+                            <td>
+                                <form action="/remove_from_list/{{ j.id }}" method="post">
+                                    {% csrf_token %}
+                                    {{ j.quoted_by }}: {{ j.quote }}
+                                    <p>
+                                        <small>Posted by: <a href="/user_quotes/{{ j.usr.id }}">{{ j.usr.alias }}</a></small>
+                                    </p>
+                                    <input type="submit" value="Remove from my list">
+                                </form>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                {% endif %}
+            </table>
+
+        </div>
+</div>
+        <div id="bottom" style="overflow:auto">
+        <p>Contribute a quote</p>
+            {% if messages %}
+                <div class="msg">
+                    {% for message in messages %}
+                        <p>{{ message }}</p>
+                    {% endfor %}
+                </div>
+            {% endif %}
+            <form action="add_quote/" method="post">
+                {% csrf_token %}
+                <p><label for="quoted_by">Quoted by: <input type="text" name="quoted_by"></label></p>
+                <p><label id="mess" for="quote">Message: <textarea name="quote" id="" cols="30" rows="4"></textarea></label></p>
+                <input class="quotes_links" type="submit" value="Submit">
+            </form>
+        </div>
+</div>
+</div>
+</body>
+</html>

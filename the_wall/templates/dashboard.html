@@ -1,0 +1,53 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<h1>Welcome {{session.first}}</h1>
+
+{% from "includes/_formhelpers.html" import render_field %}
+<form action="/add_message" method="POST">
+    <div class="form-group">
+        {{ render_field(form.message, class_="form-control", id='editor') }}
+    </div>
+    <input type="submit" class="btn btn-primary pull-right" id="pm" value="Post a Message">
+</form>
+
+<table class="table table-striped t">
+    {% for message in messages %}
+    <tr>
+        <td>
+            <a class="cmt">{{message.author}}-{{message.updated_at}}</a>
+            <p>{{message.message | safe}}</p>
+
+            <form action="{{url_for('delete_message', id=message.id)}}" method="POST">
+                <input type="hidden" name="_method" value="DELETE">
+                <input type="submit" class="btn btn-danger pull-right d" value="Delete">
+            </form>
+            <p><a href="edit_message/{{message.id}}" class="btn btn-default pull-right">Edit</a></p>
+            <div class="comments">
+                {% for comment in comments %}
+
+                {% if comment.message_id == message.id%}
+
+                <p class="cmts">{{comment.comment}}</p>
+                <small class="acmts">{{comment.author}}</small>
+                {% endif %}
+
+
+                {% endfor %}
+                <form action="{{url_for('add_comment', id=message.id)}}" method="POST">
+                    <div class="form-group">
+                        {{ render_field(formc.comment, class_="form-control") }}
+                    </div>
+                    <input class="hidecomment" type="button" value="Hide comments">
+                    <input type="submit" class="btn btn-primary pull-right" value="Post comment">
+                </form>
+                <script type="text/javascript" src="{{ url_for('static', filename = 'javascript.js') }}"></script>
+                <script type="text/javascript"
+                        src="{{url_for('static', filename = 'js/jquery-3.2.1_main.js')}}"></script>
+                <script type="text/javascript" src="static/js/jquery-3.2.1_main.js"></script>
+            </div>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}}

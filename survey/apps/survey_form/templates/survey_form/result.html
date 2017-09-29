@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>result</title>
+</head>
+<body>
+<div>
+    <p>Thanks for submitting this form</p>
+    <p>You have submitted this form {{ request.session.time }} time(s)</p>
+</div>
+<div>
+    <h3><u>Submitted Information</u></h3>
+    <p>Name: {{ request.session.name }}</p>
+    <p>Dojo Location: {{ request.session.location }}</p>
+    <p>Fav Language: {{ request.session.language }}</p>
+    <p>Comments: {{ request.session.comment }}</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{% extends 'layout.html' %}
+
+{% block body%}
+<small>Writen by {{message.author}} on {{message.created_at}}</small>
+<hr>
+<div>
+    {{message.message | safe}}
+</div>
+{% endblock %}

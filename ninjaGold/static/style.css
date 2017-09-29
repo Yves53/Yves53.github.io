@@ -1,0 +1,39 @@
+#wrapper{
+    width: 828px;
+    margin: 0 auto;
+    align-items: center;
+    background-color: aqua;
+    border: solid 2px black;
+    padding: 20px;
+}
+
+.ninja{
+
+    display: inline-block;
+    text-align: center;
+    border: solid 2px black;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 150px;
+    width: 180px;
+    /*background-color: black;*/
+}
+
+#text{
+    width: 805px;
+    height: 100px;
+}
+
+#bottom{
+
+}
+
+#reset{
+    float: right;
+    margin-right: 20px;
+}
+
+#stringl{
+    color: red;
+}

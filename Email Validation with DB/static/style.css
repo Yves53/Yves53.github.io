@@ -1,0 +1,9 @@
+#wrapper{
+    width: 600px;
+    border: solid 2px black;
+    margin: 0 auto;
+    height: auto;
+    background-color: aqua;
+    text-align: center;
+    padding: 20px;
+}

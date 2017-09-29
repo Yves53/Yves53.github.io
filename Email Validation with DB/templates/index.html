@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Email Validation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'style.css' )}}">
+</head>
+<body>
+<div id="wrapper">
+<form action="/checker" method="post">
+<p>Email address: <input NAME="email" type="email"></p>
+<input type="submit" value="submit">
+</form>
+</div>
+</body>
+</html>

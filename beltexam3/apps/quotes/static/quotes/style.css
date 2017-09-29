@@ -1,0 +1,90 @@
+.msg{
+    margin: 0 auto;
+    color: saddlebrown;
+}
+
+#user_quotes{
+    width: 400px;
+    margin: 0 auto;
+    border: solid 2px black;
+    padding: 20px;
+}
+
+#red{
+    color: red;
+}
+
+.quotes_links{
+    float: right;
+    font-size: 18px;
+    margin-left: 5px;
+}
+.rg{
+    display: inline-block;
+    border: solid 2px black;
+    margin: 10px;
+    padding: 20px;
+}
+
+.lg{
+    display: inline-block;
+    border: solid 2px black;
+    vertical-align: top;
+    padding: 20px;
+    margin: 10px;
+}
+
+.field{
+    float: right;
+}
+
+#wrapper{
+    width: 800px;
+    margin: 0 auto;
+    height: auto;
+}
+
+#bottom{
+    width: 300px;
+    margin-bottom: 0;
+    height: 200px;
+    border: solid 2px black;
+    padding: 5px;
+}
+
+#combined{
+    display: inline-block;
+    height: 603px;
+    width: 300px;
+}
+
+#wrapper2{
+    width: 300px;
+    display: inline-block;
+    vertical-align: top;
+    border: solid 2px black;
+    padding: 5px;
+    height: 375px;
+}
+
+#mess{
+vertical-align: top;
+}
+
+#quotes_wrapper{
+    width: 625px;
+    margin: 0 auto;
+    height: auto;
+}
+
+.links{
+    margin-left: 200px;
+}
+
+#quotes{
+    display: inline-block;
+    width: 300px;
+    border: solid 2px black;
+    height: 600px;
+}
+

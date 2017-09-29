@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<h1>Messages</h1>
+<ul class="list-group">
+    {% for message in messages %}
+
+    <li class="list-group-item">
+        <div>
+
+            <p>{{message.message | safe}}</p>
+            <a href="message/{{message.id}}">click here</a>
+        </div>
+    </li>
+
+    {% endfor %}
+</ul>
+{% endblock %}
